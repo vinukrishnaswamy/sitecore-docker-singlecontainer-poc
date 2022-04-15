@@ -1,0 +1,17 @@
+version: '2.4'
+
+services:
+  xm0:
+    build:
+      context: ./docker/build/xm0
+    environment:
+      PREFIX: starterkit
+      SITECORE_ADMIN_PASSWORD: b
+      SQL_SA_PASSWORD: fK6bf9hae1KIHoRFNYS
+    mem_limit: 4G
+    cpus: 2
+    ports:
+    - "14330:1433"
+    - "80:80"
+    - "443:443"
+    - "8983:8983"
